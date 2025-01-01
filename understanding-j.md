@@ -578,7 +578,13 @@ this way.
       <'bar'
   }}''
   ```
-- Goto: Considered Harmful - Edsger Dijkstra
+- Goto: `goto_MYLABEL.` continues execution at the location marked:
+  `label_MYLABEL.`. Consider that many (most prominently Dijkstra who
+  advocated for structured programming) warn of goto's tendency obscure
+  the flow of a program making it hard to maintain and debug. Goto's
+  best usecase is probably to escape deeply nested loops, which
+  are inherently un-idiomatic J code anyways (see: idiomatic
+  replacements).
 - Error handling: see: Errors
 
 ## Errors:
