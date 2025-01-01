@@ -22,7 +22,7 @@ blockquote {
 - J versions: 9.4.2,
 
 Found anything wrong? File an issue at
-<https://github.com/bugsbugsbux/jjj/issues>.
+<https://github.com/bugsbugsbux/understanding-j/issues>.
 
 ---
 
