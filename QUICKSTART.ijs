@@ -1,6 +1,7 @@
 NB. comment the rest of the line
 NB. run J in browser: https://jsoftware.github.io/j-playground/bin/html2
 NB. most important wiki page: https://code.jsoftware.com/wiki/NuVoc
+NB. this describes J9.4
 
 NB. J is an executable alternative mathematical notation
 - 2                 NB. negate number; negative sign is an underscore!
