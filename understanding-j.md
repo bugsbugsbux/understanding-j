@@ -385,14 +385,35 @@ multiline DDs which define nouns:
 
 ## Arrays:
 
-**An array is a ((list of) list/s of) value/s.** Thus even single values
-(*scalars*/*atoms*) are actually arrays. All elements must have the same
-type, and on the same nesting-level (*dimension*/*axis*) every element
-has to have the same length.
+There is no datatype "list", it is just a term to describe a
+1-dimensional collection of values.
 
-Therefore an array can be described by its type and *shape*, which is
-the list of the lengths of elements on each nesting-level. The length of
-the shape is called *rank*.
+Arrays can be thought of as nested lists, however _every_ value is
+an array -- even lists which are not nested and values which are not
+even lists (also called **scalars** or **atoms**).
+
+Arrays must only contain atoms of the same datatype and all lists on the
+same nesting-level (**dimension**/**axis**) must be of the same length!
+
+Therefore an array can be described by its datatype and **shape**, which
+is a list of the lengths of the lists on each nesting level. The length
+of the shape is called the **rank** (or dimensionality) of the array.
+
+An array which only consists of an atom which is not part of any list
+has an empty shape and thus rank 0 ("0-dimensional"). A list of one atom
+is a 1-dimensional array because the length of its shape (`1`) is 1;
+wrapping this list in another list _prepends_ another dimension of
+length 1 to the shape which is now `1 1` and thus rank 2.
+
+While an array which only consists of an atom which is not part of any
+list has an empty shape, an empty array, meaning one that does not
+contain any atoms, must have at least one `0` in its shape. An array of
+2 lists of 0 atoms each differs due to its shape (`2 0`) from an array
+of 0 lists of 2 atoms each (shape `0 2`) despite both being empty
+arrays.
+
+The length of an array is the length of its highest dimension (leftmost
+number in the shape) and always 1 for atoms!
 
 ```J
 $ 0                 NB. monad $ gives shape; scalars have an empty shape
