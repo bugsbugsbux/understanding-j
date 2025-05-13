@@ -758,8 +758,8 @@ fn "_     b.0       NB. show that this sets all ranks to same value
 ```
 
 If an argument has a **higher rank than is allowed it is broken into
-pieces of this rank called "cells"**. The verb then operates on each of
-this cells individually and finally all results are returned.
+pieces of allowed rank called "cells"**. The verb then operates on each
+of these cells individually and finally all results are returned.
 
 ```J
 - 1 2 3             NB. monad - (rank 0) breaks list into atoms
