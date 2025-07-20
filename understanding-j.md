@@ -2106,7 +2106,7 @@ The verb `u:` provides access to unicode related functionality:
 3 u: 7 u: '😈'          NB. emojis use 2 atoms in UTF-16 encoding
 3 u: 9 u: 7 u: '😈'     NB. convert to type unicode4 -> 1 atom
 3 u:10 u: 7 u: '😈'     NB. careful: 10&u: converts atoms individually:
-                        NB. the UPCs are the same but use 4 bytes each
+                        NB. the UCPs are the same but use 4 bytes each
 3 u: 9 u: 10 u:7 u:'😈' NB. use 9&u: to fix such a unicode4 string
 2 5 $ 9 u:'hell😈w😈rld'
 NB. convert each letter to UTF-8 encoded literal string and show bytes
